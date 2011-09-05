@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  image: MyString
+  name: MyString
+  description: MyString
+  bid: MyString
+  donar: MyString
+
+two:
+  image: MyString
+  name: MyString
+  description: MyString
+  bid: MyString
+  donar: MyString

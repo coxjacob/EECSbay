@@ -1,0 +1,50 @@
+
+
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+      <h4> Please upload your item's image to the 
+         <a href="http://http://www.facebook.com/#!/groups/262320557124419/">
+            EECSbay Facebook Group
+         </a> before proceding.
+    </h4>
+    
+    <p> Once you upload your image to the group, right-click on
+        the image, select properties, copy the URL for the picture, and paste
+        the URL into the text box below. 
+    </p> 
+    
+    <%= f.label "Image URL" %><br />
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label "Item Name" %><br />
+    <%= f.text_field :name %> 
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description, :rows=> 6 %>
+  </div>
+  <div class="field">
+    <%= f.label "Minimum Bid" %><br />
+    <%= f.text_field :bid %>
+  </div>
+  <div class="field">
+    <%= f.label :donar %><br />
+    <%= f.text_field :donar %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

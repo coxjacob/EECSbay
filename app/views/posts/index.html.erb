@@ -1,0 +1,44 @@
+
+
+<img alt="EECSBay" 
+     src="http://a7.sphotos.ak.fbcdn.net/hphotos-ak-ash4/321247_2375462909660_1343192899_32820711_4446204_n.jpg" 
+     width="50%" />
+
+
+
+<h1>Auction Items</h1>
+
+<table >
+  <tr >
+    <th class="tableBorder">Image</th>
+    <th class="tableBorder">Name</th>
+    <th class="tableBorder">Description</th>
+    <th class="tableBorder"> Min Bid</th>
+    <th class="tableBorder">Donar</th>
+    <th class="tableBorder"></th>
+   <!-- <th class="tableBorder"></th> -->
+    <!--<th class="tableBorder"></th> -->
+  </tr>
+
+<% @posts.each do |post| %>
+ 
+  <tr>
+    <td width="20%"> <img alt="pic" src= "<%= post.image %> " width="100%"</td>
+    <td width="20%"><%= post.name %></td>
+    <td width="40%"><%= post.description %></td>
+    <td><%= post.bid %></td>
+    <td><%= post.donar %></td>
+    <td><%= link_to 'Show', post %></td>
+   <!-- <td><%= link_to 'Edit', edit_post_path(post) %></td> -->
+    <!--<td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td> -->
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+
+<%= link_to 'Donate an Item', new_post_path %>
+
+<p> <a href="mailto: jacob.cox@usma.edu">Problems, complaints, need help? </a> </p>
+<p> This site created and maintained by Jacob Cox. Last updated on 4 Sept 2011.</p>
