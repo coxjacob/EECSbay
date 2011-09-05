@@ -1,18 +1,22 @@
 source 'http://rubygems.org'
+#source http://production.cf.rubygems.org
 
+#bundle gems used:
 gem 'rails', '3.0.10'
+gem 'sqlite3'
+#gem 'pg'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 #group :production do
- # gem 'pg'
+#gem 'pg'
 #end
 
 #group :development, :test do
-gem 'sqlite3'
+#gem 'sqlite3'
 #end
-#gem 'pg'
+
 
 # Use unicorn as the web server
 # gem 'unicorn'
